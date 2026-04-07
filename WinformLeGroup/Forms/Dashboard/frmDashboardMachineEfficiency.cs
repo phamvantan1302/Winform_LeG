@@ -27,7 +27,7 @@ namespace WinformLeGroup.Forms.Dashboard
 
             tRefreshData = new System.Windows.Forms.Timer();
             tRefreshData.Tick += new EventHandler(loadform);
-            tRefreshData.Interval = 8000;
+            tRefreshData.Interval = 15000;
             tRefreshData.Enabled = true;
         }
 
@@ -68,6 +68,7 @@ namespace WinformLeGroup.Forms.Dashboard
                 lbHieuSuat.Text = (hsvh * 100).ToString() + "%";
                 lbTyleDat.Text = (tlsp * 100).ToString() + "%";
                 lbOEE.Text = Math.Round((tghd * hsvh * tlsp)*100, 1).ToString() + "%";
+                LBSumTime.Text = Math.Round((item.runtime + item.stoptime) / 60, 2).ToString() + "";
             }
             else
             {
@@ -75,7 +76,9 @@ namespace WinformLeGroup.Forms.Dashboard
                 lbHieuSuat.Text = "0%";
                 lbTyleDat.Text = "0%";
                 lbOEE.Text = "0%";
+                LBSumTime.Text = "0";
             }
+
         }
 
         private void chartInformation1()

@@ -25,7 +25,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     //$" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" and t0.\"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
                     $" order by t0.id desc " +
                     $" limit 1";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
@@ -135,7 +135,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" and t0.\"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
                     $" order by t0.id desc " +
                     $" limit 1";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
@@ -172,7 +172,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" and t0.\"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
                     $" group by t0.\"Serial\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
@@ -208,7 +208,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" left join basic_product t2 on t0.\"ProductCode\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" and t0.\"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
                     $" group by t0.\"Serial\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
@@ -241,14 +241,14 @@ namespace WinformLeGroup.Sevices.DashboardSevices
 
             try
             {
-                sql = $"select t0.\"Serial\", max(t0.\"OKCounter\"::NUMERIC), max(t0.\"LastLatch\"::TIMESTAMP), max(t2.plannedquantity), max(t0.id) " +
+                sql = $"select t0.\"Serial\", max(t0.\"OKCounter\"::NUMERIC), max(t0.\"FirstConnect\"::TIMESTAMP), max(t2.plannedquantity), max(t0.id) " +
                     $" from fti_poc_iot t0 " +
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     " left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" group by t0.\"Serial\", t0.\"LastLatch\"";
+                    $" and t0.\"FirstConnect\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" and t0.\"FirstConnect\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" group by t0.\"Serial\", t0.\"FirstConnect\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
                     using (var reader = command.ExecuteReader())
@@ -287,14 +287,14 @@ namespace WinformLeGroup.Sevices.DashboardSevices
 
             try
             {
-                sql = $"select t0.\"Serial\", max(t0.\"OKCounter\"::NUMERIC), max(t0.\"LastLatch\"::TIMESTAMP), max(t0.\"PlanTarget\"::NUMERIC) " +
+                sql = $"select t0.\"Serial\", max(t0.\"OKCounter\"::NUMERIC), max(t0.\"FirstConnect\"::TIMESTAMP), max(t0.\"PlanTarget\"::NUMERIC) " +
                     $" from fti_poc_iot t0 " +
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     //$" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" group by t0.\"Serial\", t0.\"LastLatch\"";
+                    $" and t0.\"FirstConnect\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" and t0.\"FirstConnect\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" group by t0.\"Serial\", t0.\"FirstConnect\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
                     using (var reader = command.ExecuteReader())

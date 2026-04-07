@@ -28,7 +28,7 @@ namespace WinformLeGroup.Forms.Dashboard
             loadform(null, null);
             tRefreshData = new System.Windows.Forms.Timer();
             tRefreshData.Tick += new EventHandler(loadform);
-            tRefreshData.Interval = 8000;
+            tRefreshData.Interval = 15000;
             tRefreshData.Enabled = true;
         }
 

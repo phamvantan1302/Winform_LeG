@@ -20,14 +20,14 @@ namespace WinformLeGroup.Sevices.DashboardSevices
 
             try
             {
-                sql = $"select max(t0.\"LastLatch\"::TIMESTAMP), max(t0.\"OKCounter\"::NUMERIC), max(t0.\"NGCounter\"::NUMERIC), " + 
+                sql = $"select max(t0.\"FirstConnect\"::TIMESTAMP), max(t0.\"OKCounter\"::NUMERIC), max(t0.\"NGCounter\"::NUMERIC), " + 
                     $" max(t0.\"RunSecond\"::NUMERIC), max(t0.\"StopSecond\"::NUMERIC), max(t2.plannedquantity), max(t0.id) " +
                     $" from fti_poc_iot t0 " +
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and \"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
-                    $" group by  t0.\"Serial\", t0.\"LastLatch\"";
+                    $" and \"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" group by  t0.\"Serial\", t0.\"FirstConnect\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
                     using (var reader = command.ExecuteReader())
@@ -68,15 +68,15 @@ namespace WinformLeGroup.Sevices.DashboardSevices
 
             try
             {
-                sql = $"select max(t0.\"LastLatch\"::TIMESTAMP), max(t0.\"OKCounter\"::NUMERIC), max(t0.\"NGCounter\"::NUMERIC), " +
+                sql = $"select max(t0.\"FirstConnect\"::TIMESTAMP), max(t0.\"OKCounter\"::NUMERIC), max(t0.\"NGCounter\"::NUMERIC), " +
                     $" max(t0.\"RunSecond\"::NUMERIC), max(t0.\"StopSecond\"::NUMERIC), max(t2.plannedquantity), max(t0.id) " +
                     $" from fti_poc_iot t0 " +
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" left join orders_order t2 on t0.\"PONumber\" = t2.number " +
                     $" where t1.workstation_number = '{workstation}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" and t0.\"LastLatch\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
-                    $" group by t0.\"Serial\", t0.\"LastLatch\"";
+                    $" and t0.\"FirstConnect\"::TIMESTAMP >= '{startDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" and t0.\"FirstConnect\"::TIMESTAMP <  '{endDate.ToString("yyyy-MM-dd 00:00:00")}' " +
+                    $" group by t0.\"Serial\", t0.\"FirstConnect\"";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))
                 {
                     using (var reader = command.ExecuteReader())

@@ -24,7 +24,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                     $" from fti_poc_iot t0 " +
                     $" left join fti_poc_iot_workstation t1 on t0.\"Serial\" = t1.serial_iot " +
                     $" where t1.workstation_number in ('{workstation}') " +
-                    $" and t0.\"LastLatch\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
+                    $" and t0.\"FirstConnect\" ilike '{date.ToString("yyyy-MM-dd")}%' " +
                     $" order by t0.\"Serial\", t0.id desc " +
                     $" limit 2";
                 using (var command = new NpgsqlCommand(sql, Globals.NpgsqlConnection))

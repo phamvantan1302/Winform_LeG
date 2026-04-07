@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbRunTime = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.txtLine = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbbWorkstation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.LBSumTime = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,25 +82,28 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartOEE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMachineLine)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 123);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1244, 135);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
@@ -110,7 +117,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 129);
+            this.panel1.Size = new System.Drawing.Size(242, 129);
             this.panel1.TabIndex = 0;
             // 
             // lbRunTime
@@ -119,9 +126,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbRunTime.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRunTime.ForeColor = System.Drawing.Color.Blue;
-            this.lbRunTime.Location = new System.Drawing.Point(92, 48);
+            this.lbRunTime.Location = new System.Drawing.Point(34, 48);
             this.lbRunTime.Name = "lbRunTime";
-            this.lbRunTime.Size = new System.Drawing.Size(121, 31);
+            this.lbRunTime.Size = new System.Drawing.Size(177, 31);
             this.lbRunTime.TabIndex = 28;
             this.lbRunTime.Text = "92.5%";
             this.lbRunTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,7 +142,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label5.Location = new System.Drawing.Point(77, 97);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 15);
+            this.label5.Size = new System.Drawing.Size(89, 15);
             this.label5.TabIndex = 27;
             this.label5.Text = "Thời gian hoạt động";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +156,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.Location = new System.Drawing.Point(68, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 21);
+            this.label1.Size = new System.Drawing.Size(107, 21);
             this.label1.TabIndex = 26;
             this.label1.Text = "AVAILABILITY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +186,7 @@
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.ReadOnly = true;
             this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(269, 115);
+            this.guna2TextBox3.Size = new System.Drawing.Size(206, 115);
             this.guna2TextBox3.TabIndex = 6;
             this.guna2TextBox3.TabStop = false;
             // 
@@ -205,7 +212,7 @@
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(269, 124);
+            this.guna2TextBox2.Size = new System.Drawing.Size(206, 124);
             this.guna2TextBox2.TabIndex = 5;
             this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -217,9 +224,9 @@
             this.panel2.Controls.Add(this.guna2TextBox4);
             this.panel2.Controls.Add(this.guna2TextBox5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(314, 3);
+            this.panel2.Location = new System.Drawing.Point(251, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 129);
+            this.panel2.Size = new System.Drawing.Size(242, 129);
             this.panel2.TabIndex = 1;
             // 
             // lbHieuSuat
@@ -228,9 +235,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbHieuSuat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHieuSuat.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lbHieuSuat.Location = new System.Drawing.Point(90, 48);
+            this.lbHieuSuat.Location = new System.Drawing.Point(28, 48);
             this.lbHieuSuat.Name = "lbHieuSuat";
-            this.lbHieuSuat.Size = new System.Drawing.Size(121, 31);
+            this.lbHieuSuat.Size = new System.Drawing.Size(176, 31);
             this.lbHieuSuat.TabIndex = 29;
             this.lbHieuSuat.Text = "89.2%";
             this.lbHieuSuat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,7 +251,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label12.Location = new System.Drawing.Point(75, 97);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(152, 15);
+            this.label12.Size = new System.Drawing.Size(89, 15);
             this.label12.TabIndex = 28;
             this.label12.Text = "Hiệu suất vận hành";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,7 +265,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label9.Location = new System.Drawing.Point(66, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(170, 21);
+            this.label9.Size = new System.Drawing.Size(107, 21);
             this.label9.TabIndex = 28;
             this.label9.Text = "PERFORMANCE";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,7 +293,7 @@
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.ReadOnly = true;
             this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(269, 115);
+            this.guna2TextBox4.Size = new System.Drawing.Size(206, 115);
             this.guna2TextBox4.TabIndex = 8;
             this.guna2TextBox4.TabStop = false;
             // 
@@ -310,7 +317,7 @@
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PlaceholderText = "";
             this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(269, 124);
+            this.guna2TextBox5.Size = new System.Drawing.Size(206, 124);
             this.guna2TextBox5.TabIndex = 7;
             // 
             // panel3
@@ -321,9 +328,9 @@
             this.panel3.Controls.Add(this.guna2TextBox8);
             this.panel3.Controls.Add(this.guna2TextBox9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(625, 3);
+            this.panel3.Location = new System.Drawing.Point(499, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(305, 129);
+            this.panel3.Size = new System.Drawing.Size(242, 129);
             this.panel3.TabIndex = 2;
             // 
             // lbTyleDat
@@ -332,9 +339,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTyleDat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTyleDat.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbTyleDat.Location = new System.Drawing.Point(96, 48);
+            this.lbTyleDat.Location = new System.Drawing.Point(32, 48);
             this.lbTyleDat.Name = "lbTyleDat";
-            this.lbTyleDat.Size = new System.Drawing.Size(121, 31);
+            this.lbTyleDat.Size = new System.Drawing.Size(181, 31);
             this.lbTyleDat.TabIndex = 30;
             this.lbTyleDat.Text = "97.9%";
             this.lbTyleDat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,7 +355,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label13.Location = new System.Drawing.Point(81, 97);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 15);
+            this.label13.Size = new System.Drawing.Size(89, 15);
             this.label13.TabIndex = 29;
             this.label13.Text = "Tỷ lệ sản phẩm đạt";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,7 +369,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label10.Location = new System.Drawing.Point(72, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(170, 21);
+            this.label10.Size = new System.Drawing.Size(107, 21);
             this.label10.TabIndex = 29;
             this.label10.Text = "QUALITY";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -390,7 +397,7 @@
             this.guna2TextBox8.PlaceholderText = "";
             this.guna2TextBox8.ReadOnly = true;
             this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(269, 115);
+            this.guna2TextBox8.Size = new System.Drawing.Size(206, 115);
             this.guna2TextBox8.TabIndex = 10;
             this.guna2TextBox8.TabStop = false;
             // 
@@ -414,7 +421,7 @@
             this.guna2TextBox9.Name = "guna2TextBox9";
             this.guna2TextBox9.PlaceholderText = "";
             this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(269, 124);
+            this.guna2TextBox9.Size = new System.Drawing.Size(206, 124);
             this.guna2TextBox9.TabIndex = 9;
             // 
             // panel4
@@ -423,9 +430,9 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.guna2TextBox7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(936, 3);
+            this.panel4.Location = new System.Drawing.Point(747, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(305, 129);
+            this.panel4.Size = new System.Drawing.Size(242, 129);
             this.panel4.TabIndex = 3;
             // 
             // lbOEE
@@ -435,9 +442,9 @@
             this.lbOEE.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lbOEE.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOEE.ForeColor = System.Drawing.Color.White;
-            this.lbOEE.Location = new System.Drawing.Point(94, 48);
+            this.lbOEE.Location = new System.Drawing.Point(31, 48);
             this.lbOEE.Name = "lbOEE";
-            this.lbOEE.Size = new System.Drawing.Size(118, 55);
+            this.lbOEE.Size = new System.Drawing.Size(173, 55);
             this.lbOEE.TabIndex = 31;
             this.lbOEE.Text = "87.3%";
             this.lbOEE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,7 +458,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(69, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 21);
+            this.label11.Size = new System.Drawing.Size(106, 21);
             this.label11.TabIndex = 30;
             this.label11.Text = "OVERALL OEE";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,7 +484,7 @@
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PlaceholderText = "";
             this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(266, 124);
+            this.guna2TextBox7.Size = new System.Drawing.Size(203, 124);
             this.guna2TextBox7.TabIndex = 11;
             // 
             // tableLayoutPanel2
@@ -502,74 +509,74 @@
             this.chartOEE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.AxisX.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
-            chartArea1.Name = "ChartArea1";
-            this.chartOEE.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.DimGray;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chartOEE.Legends.Add(legend1);
+            chartArea3.AxisX.LineColor = System.Drawing.Color.Silver;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea3.AxisY.LineColor = System.Drawing.Color.Silver;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea3.Name = "ChartArea1";
+            this.chartOEE.ChartAreas.Add(chartArea3);
+            legend3.Alignment = System.Drawing.StringAlignment.Center;
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.ForeColor = System.Drawing.Color.DimGray;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            this.chartOEE.Legends.Add(legend3);
             this.chartOEE.Location = new System.Drawing.Point(475, 3);
             this.chartOEE.Name = "chartOEE";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.LimeGreen;
-            series1.Legend = "Legend1";
-            series1.MarkerSize = 15;
-            series1.Name = "OEE";
-            series1.YValuesPerPoint = 2;
-            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.DeepPink;
-            series2.Legend = "Legend1";
-            series2.MarkerSize = 10;
-            series2.Name = "Target";
-            this.chartOEE.Series.Add(series1);
-            this.chartOEE.Series.Add(series2);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.LimeGreen;
+            series4.Legend = "Legend1";
+            series4.MarkerSize = 15;
+            series4.Name = "OEE";
+            series4.YValuesPerPoint = 2;
+            series5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.DeepPink;
+            series5.Legend = "Legend1";
+            series5.MarkerSize = 10;
+            series5.Name = "Target";
+            this.chartOEE.Series.Add(series4);
+            this.chartOEE.Series.Add(series5);
             this.chartOEE.Size = new System.Drawing.Size(766, 372);
             this.chartOEE.TabIndex = 2;
             this.chartOEE.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "30-Day OEE Trend";
-            this.chartOEE.Titles.Add(title1);
+            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "30-Day OEE Trend";
+            this.chartOEE.Titles.Add(title3);
             // 
             // chartMachineLine
             // 
             this.chartMachineLine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
-            chartArea2.Name = "ChartArea1";
-            this.chartMachineLine.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chartMachineLine.Legends.Add(legend2);
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea4.Name = "ChartArea1";
+            this.chartMachineLine.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.chartMachineLine.Legends.Add(legend4);
             this.chartMachineLine.Location = new System.Drawing.Point(3, 3);
             this.chartMachineLine.Name = "chartMachineLine";
             this.chartMachineLine.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series3.Legend = "Legend1";
-            series3.Name = "Series";
-            this.chartMachineLine.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series6.Legend = "Legend1";
+            series6.Name = "Series";
+            this.chartMachineLine.Series.Add(series6);
             this.chartMachineLine.Size = new System.Drawing.Size(466, 372);
             this.chartMachineLine.TabIndex = 1;
             this.chartMachineLine.Text = "chart2";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "OEE by Machine Line";
-            this.chartMachineLine.Titles.Add(title2);
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "OEE by Machine Line";
+            this.chartMachineLine.Titles.Add(title4);
             // 
             // guna2TextBox1
             // 
@@ -738,6 +745,69 @@
             this.guna2TextBox10.TabIndex = 33;
             this.guna2TextBox10.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.LBSumTime);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.guna2TextBox6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(997, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(242, 129);
+            this.panel5.TabIndex = 4;
+            // 
+            // LBSumTime
+            // 
+            this.LBSumTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LBSumTime.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LBSumTime.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBSumTime.ForeColor = System.Drawing.Color.White;
+            this.LBSumTime.Location = new System.Drawing.Point(30, 48);
+            this.LBSumTime.Name = "LBSumTime";
+            this.LBSumTime.Size = new System.Drawing.Size(176, 55);
+            this.LBSumTime.TabIndex = 31;
+            this.LBSumTime.Text = "87.3%";
+            this.LBSumTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(47, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 21);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "SUM TIME (phút)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2TextBox6
+            // 
+            this.guna2TextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.guna2TextBox6.BorderColor = System.Drawing.Color.White;
+            this.guna2TextBox6.BorderRadius = 8;
+            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox6.DefaultText = "";
+            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.Location = new System.Drawing.Point(18, 2);
+            this.guna2TextBox6.Name = "guna2TextBox6";
+            this.guna2TextBox6.PlaceholderText = "";
+            this.guna2TextBox6.SelectedText = "";
+            this.guna2TextBox6.Size = new System.Drawing.Size(201, 124);
+            this.guna2TextBox6.TabIndex = 11;
+            // 
             // frmDashboardMachineEfficiency
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -764,6 +834,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartOEE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMachineLine)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -803,5 +874,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtLine;
         private Guna.UI2.WinForms.Guna2ComboBox cbbWorkstation;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label LBSumTime;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
     }
 }
