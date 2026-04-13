@@ -65,7 +65,7 @@ namespace WinformLeGroup.Forms.Dashboard
             string numberWorkstation = "";
             if(cbbWorkstation.SelectedValue != null)
                 numberWorkstation = cbbWorkstation.SelectedValue.ToString();
-            double sltt = frmProductionOverviewServices.getSLSXIOTBySerial(numberWorkstation, date),
+            double sltt = Math.Floor(frmProductionOverviewServices.getSLSXIOTBySerial(numberWorkstation, date)/2),
                 slkh = frmProductionOverviewServices.getSLKH(numberWorkstation, date);
             lbDailyProduction.Text = sltt.ToString();
             lbTargetAchievement.Text = slkh.ToString();

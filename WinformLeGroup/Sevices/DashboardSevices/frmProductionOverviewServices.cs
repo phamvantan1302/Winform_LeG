@@ -262,6 +262,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                                 slsxKH = reader.IsDBNull(3) ? 0 : reader.GetDouble(3),
                                 id = reader.IsDBNull(4) ? 0 : reader.GetInt32(4)
                             };
+                            item.slsxTT = Math.Floor(item.slsxTT / 2); ;
                             ret.Add(item);
                         }
                         reader.Close();
@@ -307,6 +308,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                                 slsxTT = reader.IsDBNull(1) ? 0 : reader.GetDouble(1),
                                 slsxKH = reader.IsDBNull(3) ? 0 : reader.GetDouble(3),
                             };
+                            item.slsxTT = Math.Floor(item.slsxTT / 2); ;
                             ret.Add(item);
                         }
                         reader.Close();

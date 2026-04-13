@@ -43,7 +43,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                                 stoptime = reader.IsDBNull(4) ? 0 : reader.GetDouble(4),
                                 slkh = reader.IsDBNull(5) ? 0 : reader.GetDouble(5),
                             };
-                            
+                            ret.slsx = Math.Floor(ret.slsx / 2); ;
                         }
                         reader.Close();
                         command.Dispose();
@@ -93,6 +93,7 @@ namespace WinformLeGroup.Sevices.DashboardSevices
                                 slkh = reader.IsDBNull(5) ? 0 : reader.GetDouble(5),
                                 id = reader.IsDBNull(6) ? 0 : reader.GetInt32(6)
                             };
+                            item.slsx = Math.Floor(item.slsx / 2); ;
                             ret.Add(item);
                         }
                         reader.Close();
